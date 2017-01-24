@@ -1,8 +1,9 @@
 {	"expiration" : {"day":1},
-	"conditions": [ ["starts-with", "$key", "radek.student/"],
+	"conditions": [ ["starts-with", "$key", "rr.student/"],
     				 {"bucket": "lab4-weeia"}, 
     				 {"acl": "private"},
-    				 {"success_action_redirect": "http://localhost:8080"},   
+    				 {"success_action_redirect": "http://localhost:8080/digest"},
+					 {"x-amz-meta-owner": "Roman Rosiak"}, 
     				 ["content-length-range", 0, 1048576]
     				]   
 }
